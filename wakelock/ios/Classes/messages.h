@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class FLTIsEnabledMessage;
 
 @interface FLTToggleMessage : NSObject
-@property(nonatomic, strong, nullable) NSNumber * enable;
+@property(nonatomic, strong, nullable) NSNumber * toggleEnable;
 @end
 
 @interface FLTIsEnabledMessage : NSObject

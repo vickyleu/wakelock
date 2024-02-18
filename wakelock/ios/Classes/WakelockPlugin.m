@@ -16,7 +16,7 @@
 }
 
 - (void)toggleMsg:(FLTToggleMessage*)input error:(FlutterError**)error {
-  BOOL enable = [input.enable boolValue];
+  BOOL enable = [input.toggleEnable boolValue];
   if (!enable) {
     [[UIApplication sharedApplication] lock_idleTimerlockEnable:enable];//should disable first
     [self setIdleTimerDisabled:enable];

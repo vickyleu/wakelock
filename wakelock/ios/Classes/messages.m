@@ -34,14 +34,14 @@ static NSDictionary<NSString *, id> *wrapResult(id result, FlutterError *error) 
 @implementation FLTToggleMessage
 + (FLTToggleMessage *)fromMap:(NSDictionary *)dict {
   FLTToggleMessage *result = [[FLTToggleMessage alloc] init];
-  result.enable = dict[@"enable"];
-  if ((NSNull *)result.enable == [NSNull null]) {
-    result.enable = nil;
+  result.toggleEnable = dict[@"enable"];
+  if ((NSNull *)result.toggleEnable == [NSNull null]) {
+    result.toggleEnable = nil;
   }
   return result;
 }
 - (NSDictionary *)toMap {
-  return [NSDictionary dictionaryWithObjectsAndKeys:(self.enable ? self.enable : [NSNull null]), @"enable", nil];
+  return [NSDictionary dictionaryWithObjectsAndKeys:(self.toggleEnable ? self.toggleEnable : [NSNull null]), @"enable", nil];
 }
 @end
 
